@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ画像</title>
+    <style>
+        /* CSS: ページの見た目と要素の配置を定義 */
+        body {
+            /* ページ全体を縦方向の中央に配置 */
+            display: flex;
+            flex-direction: column; /* 要素を縦に並べる */
+            justify-content: center; /* 垂直方向の中央揃え */
+            align-items: center; /* 水平方向の中央揃え */
+            min-height: 100vh; /* ビューポートの高さ全体を使用 */
+            margin: 0; /* デフォルトのマージンを削除 */
+            background-color: #f0f0f0; /* 背景色 */
+            font-family: sans-serif; /* フォントの指定 */
+        }
+        #omikujiImage {
+            /* 画像のスタイル */
+            max-width: 80%; /* 親要素の幅の最大80% */
+            max-height: 70vh; /* ビューポートの高さの最大70% */
+            border: 2px solid #ccc; /* 枠線 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 影 */
+            object-fit: contain; /* 画像が要素に収まるように調整（アスペクト比を維持） */
+        }
+        button {
+            /* ボタンのスタイル */
+            padding: 10px 20px; /* 内側の余白 */
+            font-size: 1.2em; /* フォントサイズ */
+            margin-top: 20px; /* 画像との間に上マージン */
+            cursor: pointer; /* マウスオーバーでカーソルをポインターに */
+            background-color: #007bff; /* 背景色（青系） */
+            color: white; /* 文字色 */
+            border: none; /* 枠線を削除 */
+            border-radius: 5px; /* 角を丸くする */
+            transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+        }
+        button:hover {
+            /* ボタンにマウスが乗った時のスタイル */
+            background-color: #0056b3; /* 背景色を少し濃くする */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="omikujiImage" src="" alt="おみくじ画像">
+        <button onclick="displayRandomImage()">もう一度引く</button>
+    </div>
+
+    <script>
+        // JavaScript: 動的な振る舞いを定義
+
+        // 表示する画像のパスを配列として定義します。
+        // ここにあなたの画像ファイルのパスとファイル名を正確に記述してください。
+        // 例: 'images/daikichi.png', 'images/chukichi.png', 'images/suekichi.png', 'images/kyo.png'
+        const images = [
+            'images/image1.png', // <-- この部分をあなたの画像ファイル名に合わせて変更
+            'images/image2.png', // <-- この部分をあなたの画像ファイル名に合わせて変更
+            'images/image3.png', // <-- この部分をあなたの画像ファイル名に合わせて変更
+            // さらに画像を追加する場合は、ここに新しい行を追加してください
+            // 例: 'images/image4.png',
+            // 例: 'images/image5.png'
+        ];
+
+        /**
+         * images配列からランダムな画像を選び、img要素のsrcを更新して表示します。
+         */
+        function displayRandomImage() {
+            // images配列の長さに基づいてランダムなインデックスを生成
+            const randomIndex = Math.floor(Math.random() * images.length);
+            // 生成されたインデックスに対応する画像のパスを取得
+            const randomImage = images[randomIndex];
+            // IDが "omikujiImage" であるimg要素を取得し、そのsrc属性を更新
+            document.getElementById('omikujiImage').src = randomImage;
+        }
+
+        // ページが完全に読み込まれた（DOMが構築され、画像も読み込み完了した）後に、
+        // displayRandomImage関数を一度実行して、最初の画像をランダムに表示します。
+        window.onload = displayRandomImage;
+    </script>
+</body>
+</html>
