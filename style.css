@@ -1,23 +1,27 @@
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* containerを上寄せにする場合はこれ */
+    align-items: flex-start; /* containerを左寄せにする場合はこれ */
     min-height: 100vh;
     margin: 0;
-    background-color: #e0f7fa; /* 背景色を変更して差別化 */
+    background-color: #e0f7fa;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
+    padding-top: 50px; /* 必要であれば上部に余白を追加 */
+    padding-left: 5%; /* 左端に5%の余白 */
 }
 
 .container {
-    text-align: left; /* コンテナ内のテキストを左揃えに */
+    text-align: left;
     background-color: #ffffff;
     padding: 40px 60px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    max-width: 90%;
-    line-height: 1.4; /* 行の高さを調整（小さく） */
+    max-width: 90%; /* または適切な固定値（例: 800px）*/
+    width: 100%; /* max-widthと併用で、利用可能な幅を最大限に使う */
+    line-height: 1.4;
+    /* margin: 0 auto; は削除するか、left/rightを調整 */
 }
 
 p {
