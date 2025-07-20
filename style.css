@@ -26,7 +26,7 @@ body {
 
 p {
     font-size: 1em; /* 段落の文字サイズを調整（小さく） */
-    margin-bottom: 10px; /* 段落間の余白を調整 */
+    margin-bottom: 8px; /* 段落間の余白を調整 */
     white-space: pre-wrap; /* 改行を反映させる */
 }
 
