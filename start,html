@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじスタートページ</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #e0f7fa; /* 背景色を変更して差別化 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            line-height: 1.6; /* 行の高さを調整して読みやすく */
+        }
+
+        h1 { /* h1タグは使わないので削除、またはコメントアウト */
+            /* color: #00796b;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); */
+        }
+
+        p {
+            font-size: 1.1em; /* 段落の文字サイズを調整 */
+            margin-bottom: 20px;
+            text-align: left; /* 段落を左寄せに */
+            white-space: pre-wrap; /* 改行を反映させる */
+        }
+
+        .credit {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 30px;
+            text-align: right; /* クレジットを右寄せに */
+        }
+
+        .start-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+            background-color: #00bcd4; /* ボタンの色 */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none; /* リンクの下線を削除 */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .start-button:hover {
+            background-color: #0097a7; /* ホバー時の色 */
+            transform: translateY(-2px); /* 少し浮き上がるエフェクト */
+        }
+
+        .start-button:active {
+            transform: translateY(0); /* クリック時のエフェクト */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>「鶴さん、おみくじだ！　せっかくだから引いていこうぜ」<br>
+        鶴丸としてはどちらでも良かった。けれど懐いてくる子犬が新しいおもちゃを見つけたみたいにはしゃぐから、口元が緩み弧を描く。鶴丸が笑ったからか、豊前の笑みも燦めきを増す。こういうところが、かわいくって仕方ない。<br>
+        「大吉以外は認めねえ！」<br>
+        豊前はそう言うと、おみくじ箱の中に早々と片手を突っ込んだ。<br>
+        豊前には悪いが大吉では驚きがない。なにか面白いものが入っている方がいい。</p>
+
+        <p>――ああ、でも。<br>
+        おみくじの結果に一喜一憂して表情を万華鏡のように変えるきみの姿は、きっと〝驚き〟に満ちている。<br>
+        おみくじよりも、俺はそっちの方が楽しくって仕方ない。<br>
+        大吉を引いてもそれとなくもう一度引くよう促してみようか。<br>
+        一時として同じ顔をしないきみは、俺の〝驚き〟そのものだから。</p>
+
+        <div class="credit">
+            <p>*Illustration：りこさん（@ricocoiy)<br>
+            *sentence：あわち（@ddddgbbbbb）</p>
+        </div>
+
+        <a href="index.html" class="start-button">おみくじを引く</a>
+    </div>
+</body>
+</html>
